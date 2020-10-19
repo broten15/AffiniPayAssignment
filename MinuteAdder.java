@@ -13,99 +13,124 @@ public class MinuteAdder {
         // Tester for addMinutes
 
         // test 1
-        String actual = addMinutes("12:00 PM", 0);
+        int minsToAdd = 0;
+        String actual = addMinutes("12:00 PM", minsToAdd);
         String expected = "12:00 PM";
-        assertEquals(actual, expected, 1, 0, "12:00 PM");
+        assertEquals(actual, expected, 1, minsToAdd, "12:00 PM");
 
         // test 2
-        actual = addMinutes("12:00 AM", 0);
+        minsToAdd = 0;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "12:00 AM";
-        assertEquals(actual, expected, 2, 0, "12:00 AM");
+        assertEquals(actual, expected, 2, minsToAdd, "12:00 AM");
 
         // test 3
-        actual = addMinutes("12:00 AM", 720);
+        minsToAdd = 720;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "12:00 PM";
-        assertEquals(actual, expected, 3, 720, "12:00 AM");
+        assertEquals(actual, expected, 3, minsToAdd, "12:00 AM");
 
         // test 4
-        actual = addMinutes("12:00 PM", 720);
+        minsToAdd = 720;
+        actual = addMinutes("12:00 PM", minsToAdd);
         expected = "12:00 AM";
-        assertEquals(actual, expected, 4, 720, "12:00 PM");
+        assertEquals(actual, expected, 4, minsToAdd, "12:00 PM");
 
         // test 5
-        actual = addMinutes("12:00 AM", 1440);
+        minsToAdd = 1440;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "12:00 AM";
-        assertEquals(actual, expected, 5, 1440, "12:00 AM");
+        assertEquals(actual, expected, 5, minsToAdd, "12:00 AM");
 
         // test 6
-        actual = addMinutes("12:00 PM", 1440);
+        minsToAdd = 1440;
+        actual = addMinutes("12:00 PM", minsToAdd);
         expected = "12:00 PM";
-        assertEquals(actual, expected, 6, 1440, "12:00 PM");
+        assertEquals(actual, expected, 6, minsToAdd, "12:00 PM");
 
         // test 7
-        actual = addMinutes("12:00 AM", 5);
+        minsToAdd = 5;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "12:05 AM";
-        assertEquals(actual, expected, 7, 5, "12:00 AM");
+        assertEquals(actual, expected, 7, minsToAdd, "12:00 AM");
 
         // test 8
-        actual = addMinutes("12:00 AM", -5);
+        minsToAdd = -5;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "11:55 PM";
-        assertEquals(actual, expected, 8, -5, "12:00 AM");
+        assertEquals(actual, expected, 8, minsToAdd, "12:00 AM");
 
         // test 9
-        actual = addMinutes("12:00 PM", 5);
+        minsToAdd = 5;
+        actual = addMinutes("12:00 PM", minsToAdd);
         expected = "12:05 PM";
-        assertEquals(actual, expected, 9, 5, "12:00 PM");
+        assertEquals(actual, expected, 9, minsToAdd, "12:00 PM");
 
         // test 10
-        actual = addMinutes("12:00 PM", -5);
+        minsToAdd = -5;
+        actual = addMinutes("12:00 PM", minsToAdd);
         expected = "11:55 AM";
-        assertEquals(actual, expected, 10, -5, "12:00 PM");
+        assertEquals(actual, expected, 10, minsToAdd, "12:00 PM");
 
         // test 11
-        actual = addMinutes("12:00 AM", 1343457);
+        minsToAdd = 1343457;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "10:57 PM";
-        assertEquals(actual, expected, 11, 1343457, "12:00 AM");
+        assertEquals(actual, expected, 11, minsToAdd, "12:00 AM");
 
         // test 12
-        actual = addMinutes("12:00 AM", -1343457);
+        minsToAdd = -1343457;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "1:03 AM";
-        assertEquals(actual, expected, 12, -1343457, "12:00 AM");
+        assertEquals(actual, expected, 12, minsToAdd, "12:00 AM");
 
         // test 13
-        actual = addMinutes("12:00 AM", 65);
+        minsToAdd = 65;
+        actual = addMinutes("12:00 AM", minsToAdd);
         expected = "1:05 AM";
-        assertEquals(actual, expected, 13, 65, "12:00 AM");
+        assertEquals(actual, expected, 13, minsToAdd, "12:00 AM");
 
         // test 14
-        actual = addMinutes("12:00 PM", 65);
+        minsToAdd = 65;
+        actual = addMinutes("12:00 PM", minsToAdd);
         expected = "1:05 PM";
-        assertEquals(actual, expected, 14, 65, "12:00 PM");
+        assertEquals(actual, expected, 14, minsToAdd, "12:00 PM");
 
         // test 15
-        actual = addMinutes("1:05 PM", -65);
+        minsToAdd = -65;
+        actual = addMinutes("1:05 PM", minsToAdd);
         expected = "12:00 PM";
-        assertEquals(actual, expected, 15, -65, "1:05 PM");
+        assertEquals(actual, expected, 15, minsToAdd, "1:05 PM");
 
         // test 16
-        actual = addMinutes("4:25 PM", 347);
+        minsToAdd = 347;
+        actual = addMinutes("4:25 PM", minsToAdd);
         expected = "10:12 PM";
-        assertEquals(actual, expected, 16, 347, "4:25 PM");
+        assertEquals(actual, expected, 16, minsToAdd, "4:25 PM");
 
         // test 17
-        actual = addMinutes("4:25 AM", 347);
+        minsToAdd = 347;
+        actual = addMinutes("4:25 AM", minsToAdd);
         expected = "10:12 AM";
-        assertEquals(actual, expected, 17, 347, "4:25 AM");
+        assertEquals(actual, expected, 17, minsToAdd, "4:25 AM");
 
         // test 18
-        actual = addMinutes("4:25 AM", -347);
+        minsToAdd = -347;
+        actual = addMinutes("4:25 AM", minsToAdd);
         expected = "10:38 PM";
-        assertEquals(actual, expected, 18, -347, "4:25 AM");
+        assertEquals(actual, expected, 18, minsToAdd, "4:25 AM");
 
         // test 19
-        actual = addMinutes("4:25 PM", -347);
+        minsToAdd = -347;
+        actual = addMinutes("4:25 PM", minsToAdd);
         expected = "10:38 AM";
-        assertEquals(actual, expected, 19, -347, "4:25 PM");
+        assertEquals(actual, expected, 19, minsToAdd, "4:25 PM");
+
+        // test 20
+        minsToAdd = 200;
+        actual = addMinutes("9:13 AM", minsToAdd);
+        expected = "12:33 PM";
+        assertEquals(actual, expected, 20, minsToAdd, "9:13 AM");
     }
 
     /**
@@ -132,7 +157,7 @@ public class MinuteAdder {
         // the minsSince12AM of the most recent day which we want to get the time for
         minsSince12AM %= MINS_IN_DAY; 
 
-        // if minsSince12AM is negative, the minsSince12AM will be mins before 12 AM, 
+        // if minsSince12AM is negative, the minsSince12AM will be the mins before 12 AM, 
         // so convert it back into the mins since 12 AM
         if (minsSince12AM < 0) {
             minsSince12AM = MINS_IN_DAY + minsSince12AM;
